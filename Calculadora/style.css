@@ -64,6 +64,7 @@ body {
 
 .linha:last-child{
     margin-bottom: 20px;
+    justify-content: flex-end;
 }
 
 span {
@@ -77,7 +78,7 @@ span {
 }
 
 input {
-    height: 50px;
+    min-height: 50px;
     width: 250px;
     margin: 15px 25px 15px 25px;
     text-align: right;
