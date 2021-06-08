@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+}
+
+.calculadora-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    border-radius: 18px;
+    border: 1px solid #000;
+    padding-bottom: 20px;
+    box-shadow: 3px 3px 12px #000;
+}
+
+.header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    margin: 20px;
+    border-bottom: solid 2px #000;
+}
+
+.body-area {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.body-area form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-area span{
+    width: 60px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.body-area label{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.body-area input{
+    font-weight: bold;
+    padding-left: 10px;
+    flex: 1;
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 6px;
+    border: 0;
+    outline: none;
+    background-color: #FFF;
+    border: 2px solid #000;
+}
+
+.body-area .button{
+    text-align: center;
+    width: 245px;
+    cursor: pointer;
+    background-color: yellowgreen;
+}
+
+.area-resultado {
+    width: 274px;
+    height: 150px;
+    background-color: #FFF;
+    margin-top: 20px;
+    border-radius: 15px;
+    border: solid 2px #000;
+    font-size: 23px;
+    padding: 20px;
+    text-align: center;
+    line-height: 30px;
+}
