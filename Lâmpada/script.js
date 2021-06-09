@@ -12,17 +12,17 @@ let btnDesligar = document.querySelector('#desligar');
 
     imagem.addEventListener("dblclick", quebraLampada);
 
-    
-
 function ligaLampada() {
     if (!estaQuebrada()) {
         imagem.src = "./images/ligada.jpg";
+        apareceBotaoDesligar()
      }      
 };
 
 function desligaLampada() {
     if (!estaQuebrada()) {
         imagem.src = "./images/desligada.jpg";
+        apareceBotaoLigar()
     }   
 };
 
@@ -32,4 +32,14 @@ function quebraLampada() {
 
 function estaQuebrada() {
     return imagem.src.indexOf ('quebrada') > -1;
+};
+
+function apareceBotaoLigar() {
+    btnLigar.style.display = 'inline-flex';
+    btnDesligar.style.display = 'none'
+};
+
+function apareceBotaoDesligar() {
+    btnLigar.style.display = 'none';
+    btnDesligar.style.display = 'inline-flex'
 };
