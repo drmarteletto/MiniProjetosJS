@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -10,15 +14,29 @@ body {
 .slide-area{
     display: flex;
     width: 600px;
-    height: 300px;
+    height: 301px;
     border: 3px solid #000;
     border-radius: 15px;
+    overflow: hidden;
 }
 
 .slide {
-    display: block;
-    width: initial;
-    height: initial;
+    transition: all 2s;
+}
+
+.slide:first-child {
+    margin-left: -25%;
+}
+
+.slide-width {
+    height: 100%;
+    display: flex;
+    transition: all 1s;
+}
+
+.slide-width img{
+    height: 100%;
+    width: 600px;
 }
 
 .prev {  
@@ -52,8 +70,60 @@ body {
     opacity: 0.5;
 }
 
-.slide img{
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
+.pause, .play{
+    position: absolute;
+    background-color: transparent;
+    height: 301px;
+    width: 540px;
+    margin: 0px 30px 0px 30px;
+    z-index: 999;
+}
+
+.pause img, .play img{
+    height: 80px;
+    width: 80px;
+}
+
+.play {
+    display: none;
+}
+
+.pause {
+    display: flex;
+}
+
+.botoesTrocaSlide{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    height: 30px;
+    width: 600px;
+    margin-top: 272px;
+    border-radius: 0px 0px 12px 12px;
+    z-index: 1000;
+    transition: all 0.5s;
+}
+
+.botoesTrocaSlide:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.botaoSlide {
+    background-color: rgba(255, 255, 255, 0.425);
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    margin-right: 15px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.botaoSlide:hover {
+    background-color: #FFF;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    margin-right: 10px;
 }
