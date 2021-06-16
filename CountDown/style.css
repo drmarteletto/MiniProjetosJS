@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #FFF;
+}
+
+body {
+    background-image: url(./img-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title h1 {
+    font-size: 60px;
+    text-shadow: 0px 0px 7px #000;
+}
+
+.title p {
+    font-size: 30px;
+    text-shadow: 0px 0px 3px #000;
+}
+
+.countdown {
+    display: flex;
+    width: 50vw;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.countdown h1 {
+    font-size: 120px;
+    color: #FFF;
+    text-shadow: 0px 0px 18px yellow;
+}
+
+.countdown p {
+    font-size: 20px;
+    text-shadow: 0px 0px 3px #000;
+    text-align: center;
+}
+
+.button{
+    display: block;
+    padding: 16px;
+    border: solid 4px #FFF;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.box-area{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.box {
+    background-image: url(./img-box.jpg);
+    background-position: center;
+    background-size: cover;
+    border: solid 3px #FFF;
+    border-radius: 20px;
+    width: 400px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    box-shadow: 0px 0px 100px #000;
+}
+
+.box form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box form fieldset {
+    border: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.box .button {
+    background-color: rgba(107, 107, 107, 0.521);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 20px;
+}
+
+.box input {
+    color: #000;
+}
+
+.box p {
+    text-shadow: 2px 2px 3px #000;
+}
+
+.fechar-box {
+    position: relative;
+    right: -380px;
+    top: -100px;
+    cursor: pointer;
+}

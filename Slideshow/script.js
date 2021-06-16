@@ -13,18 +13,17 @@ const addBotoes = () => {
     }
 };
 
-const selectSlide = () => { // -------------- Finalizar esta funçao para selecionar o slide pelo botão
-    let slide = document.querySelectorAll('.botoesTrocaSlide');
-    console.log(slide);
-};
-
 const containerItems = document.querySelector('.slide-width');
 
 
-const loadImages = (images, containerItems) => {
-    for (let i = 0; i < images.length; i++) {        
-        containerItems.innerHTML += `<div class = 'slide'><img src = '${images[i].url}'></div>`;
-    }
+const loadImages = (images, container) => {
+    images.forEach( image => {
+        container.innerHTML += `
+            <div class = 'slide'>
+                <img src = '${image.url}'>
+            </div>
+        `
+    })
 };
 
 loadImages(images, containerItems);
@@ -32,6 +31,13 @@ loadImages(images, containerItems);
 let items = document.querySelectorAll('.slide');
 var count = 0;
 var execution;
+
+const selectSlide = () => {
+    let slide = document.querySelectorAll('.botaoSlide');
+        slide[0].addEventListener("click", () => {
+            // Criar função para selecionar o slide desejado
+        })
+    };
 
 const previous = () => {
     containerItems.appendChild(items[0]);
@@ -63,20 +69,18 @@ function playAndPause() {
         },3000)
     } else {
         clearInterval(execution);
-        document.querySelector('.pause').style.display = 'none';
-        document.querySelector('.play').style.display = 'flex';
         count = 0;
     }
     function active() {
         next();
-        document.querySelector('.pause').style.display = 'flex';
-        document.querySelector('.play').style.display = 'none';
         count++;
     }
 };
 
 playAndPause();
 addBotoes();
+selectSlide();
+
 
 document.querySelector('.prev').addEventListener("click", previous);
 document.querySelector('.next').addEventListener("click", next);
